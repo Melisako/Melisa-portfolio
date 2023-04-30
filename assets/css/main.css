@@ -1529,6 +1529,7 @@ input, select, textarea {
 	}
 
 		header > p {
+		
 			margin: 0.5em 0 0 0;
 			color: #aaa;
 		}
@@ -2091,8 +2092,8 @@ input, select, textarea {
 					#main > .panel.intro header h1 {
 						line-height: 1.25em;
 						margin-bottom: 0;
-						padding-left: 60px;
-						font-size: 40px;
+						padding-left: 5px;
+						font-size: 35px;
 						padding-top: 100px;
 					}
 
@@ -2100,8 +2101,8 @@ input, select, textarea {
 						letter-spacing: -0.015em;
 						font-size: 1.25em;
 						margin: 0.25em 0 0 0;
-						padding-left: 60px;
-						font-size: 40px;
+						padding-right: 0px;
+						font-size: 30px;
 						padding-bottom: 90px;
 					}
 
@@ -2138,7 +2139,7 @@ input, select, textarea {
 					}
 
 						#main > .panel.intro header p {
-							font-size: 1em;
+							font-size: 2em;
 							margin: 0.25em 0 0 0;
 						}
 
@@ -2234,11 +2235,123 @@ input, select, textarea {
   }
   
   .icons {
-padding-right: 150px;
-
+padding-right: 90px;
 
   }
+
+
+
+  q {
+	font-style: italic;
+	color: gray;
+	border-left: 2px solid gray;
+	padding-left: 5px;
+	position: relative;
+	transition: all 0.3s ease-in-out;
+  }
+  
+  q:before {
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: -10px;
+	width: 20px;
+	height: 2px;
+	background-color: gray;
+	transition: transform 0.3s ease-in-out;
+	transform-origin: top left;
+  }
+  
+  q:after {
+	content: '';
+	position: absolute;
+	bottom: -5px;
+	left: -10px;
+	width: 20px;
+	height: 2px;
+	background-color: gray;
+	transition: transform 0.3s ease-in-out;
+	transform-origin: bottom left;
+  }
+  
+  q:hover {
+	transform: rotate(-3deg) scale(1.1);
+	border-color: #333;
+  }
+  
+  q:hover:before {
+	transform: scaleX(1.2) rotate(45deg);
+  }
+  
+  q:hover:after {
+	transform: scaleX(1.2) rotate(-45deg);
+  }
+  
+  
+  .fa-linode {
+	animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+	0% {
+	  transform: translateY(0);
+	}
+	50% {
+	  transform: translateY(-10px);
+	}
+	100% {
+	  transform: translateY(0);
+	}
+  }
+
+
+
+
+  .animated-mail {
+	display: inline-block;
+	position: relative;
+	animation-name: example;
+	animation-duration: 34s;
+	animation-iteration-count: infinite;
+  }
+  
+  @keyframes example {
+	0% {left: 0;}
+	50% {left: 10px;}
+	100% {left: 0;}
+  }
+  
+
+
+
+
+
+  .caption {
+	color: white;
+	animation: colorChange 3s ease-in-out infinite alternate;
+font-weight: bold;
+	width: 320px;
+  }
+  
+  @keyframes colorChange {
+	from {
+	  color: white;
+	}
+	to {
+	  color: rgba(66, 67, 66, 0.308);
+	}
+  }
+  
+
  
+  
+ 
+  .fa-facebook {
+	background: #1f2e93;
+	color: white;
+  }  
+
+
   h1 {
 	transition: color 0.5s ease;
 }
